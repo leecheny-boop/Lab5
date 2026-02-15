@@ -1,39 +1,36 @@
-# Lab5
-E533 Lab 5: Pipelined Datapath Design (NetFPGA)
-This project implements the hardware skeleton of an ARM-compatible processor datapath on the NetFPGA platform. The goal is to build the computational core that handles arithmetic operations and memory interaction.
+# E533 Lab 5: Pipelined Datapath Design for ARM-Compatible Processor
 
-🚀 Key Features
-64-bit Synchronous ALU:
+This repository contains the Verilog implementation of a 5-stage pipelined processor datapath designed for the NetFPGA platform. The project is part of the USC E533 course (Network Processor Design).
 
-Designed a custom ALU supporting Add, Subtract, AND, OR, XNOR, Compare, and Logical Shift.
+## 📖 Project Overview
 
-Includes overflow detection and synchronous output registers.
-+1
+The goal of this laboratory is to design, simulate, and integrate a custom ARM-compatible processor core into the NetFPGA Router reference design. The system features a 5-stage pipeline architecture and a software/hardware register interface that allows the host to program the Instruction Memory (I-Mem) and inspect the Data Memory (D-Mem).
 
-Memory & Register File:
+### Key Features
+* **5-Stage Pipeline Architecture**:
+    * **IF (Instruction Fetch)**: PC update and instruction retrieval.
+    * **ID (Instruction Decode)**: Control signal generation and Register File access.
+    * **EX (Execute)**: ALU operations (Add, Sub, Logic, Shift).
+    * **MEM (Memory Access)**: Data memory read/write operations.
+    * **WB (Write Back)**: Writing results back to the Register File.
+* **Memory Architecture**: Integrated Block RAM (BRAM) for separate Instruction and Data memories.
+* **SW/HW Interface**: Custom register interface to program the processor via the NetFPGA `reg_write` / `reg_read` tools.
 
+## 📂 File Structure
 
-Register File: 64-bit wide with 2 read ports and 1 write-back port.
-
-
-On-Chip Memory: Integrated BRAM for Instruction Memory (32-bit) and Data Memory (64-bit).
-+1
-
-Pipeline Datapath Skeleton:
-
-Connected the ALU, Registers, and Memory into a pipeline structure.
-
-Capable of executing basic custom instructions (Load/Store/Move) to verify data movement.
-
-NetFPGA Integration:
-
-Integrated the datapath into the user_datapath module of the reference router.
-
-Implemented a software/hardware register interface to program memory and verify execution results.
-
-🛠️ Tools Used
-Hardware: NetFPGA
-
-Language: Verilog HDL
-
-Simulation: ModelSim / ISE
+```text
+E533-Lab5-Processor/
+├── src/
+│   ├── pipeline_top.v       # Top-level module connecting all pipeline stages
+│   ├── register_file.v      # 64-bit Register File (2 Read Ports, 1 Write Port)
+│   ├── instruction_memory.v # Instruction Memory wrapper (BRAM)
+│   ├── data_memory.v        # Data Memory wrapper (BRAM)
+│   ├── alu.v                # Arithmetic Logic Unit (Part 1)
+│   └── user_datapath.v      # NetFPGA wrapper module
+├── sim/
+│   ├── pipeline_tb.v        # Testbench: Verifies instruction flow and data hazards
+│   └── pipeline_wave.wcfg   # Waveform configuration file (optional)
+├── docs/
+│   ├── schematics/          # Screen captures of the synthesized schematics
+│   └── diagrams/            # High-level datapath design diagrams
+└── README.md
