@@ -18,19 +18,16 @@ The goal of this laboratory is to design, simulate, and integrate a custom ARM-c
 
 ## 📂 File Structure
 
-```text
+```text         
 E533-Lab5-Processor/
 ├── src/
-│   ├── pipeline_top.v       # Top-level module connecting all pipeline stages
-│   ├── register_file.v      # 64-bit Register File (2 Read Ports, 1 Write Port)
-│   ├── instruction_memory.v # Instruction Memory wrapper (BRAM)
-│   ├── data_memory.v        # Data Memory wrapper (BRAM)
-│   ├── alu.v                # Arithmetic Logic Unit (Part 1)
-│   └── user_datapath.v      # NetFPGA wrapper module
+│   ├── pipeline_datapath.v       # Top-level module connecting all pipeline stages
+│   ├── regfile.v      # 64-bit Register File (2 Read Ports, 1 Write Port)
+│   ├── I_MEM.v # Instruction Memory wrapper (BRAM)
+│   ├── D_MEM.v        # Data Memory wrapper (BRAM)
+│   ├── alu.new.v                # Arithmetic Logic Unit (Part 1)
 ├── sim/
-│   ├── pipeline_tb.v        # Testbench: Verifies instruction flow and data hazards
-│   └── pipeline_wave.wcfg   # Waveform configuration file (optional)
+│   ├── tb.v        # Testbench: Verifies instruction flow and data hazards
 ├── docs/
-│   ├── schematics/          # Screen captures of the synthesized schematics
-│   └── diagrams/            # High-level datapath design diagrams
+│   ├── projects report          # Screen captures of the synthesized schematics
 └── README.md
