@@ -23,11 +23,11 @@ E533-Lab5-Processor/
 ├── src/
 │   ├── pipeline_datapath.v       # Top-level module connecting all pipeline stages
 │   ├── regfile.v      # 64-bit Register File (2 Read Ports, 1 Write Port)
-│   ├── I_MEM.v # Instruction Memory wrapper (BRAM)
+│   ├── I_MEM.v        # Instruction Memory wrapper (BRAM)
 │   ├── D_MEM.v        # Data Memory wrapper (BRAM)
-│   ├── alu.new.v                # Arithmetic Logic Unit (Part 1)
+│   ├── alu.new.v      # Arithmetic Logic Unit (Part 1)
 ├── sim/
-│   ├── tb.v        # Testbench: Verifies instruction flow and data hazards
+│   ├── tb.v           # Testbench: Verifies instruction flow and data hazards
 ├── docs/
 │   ├── projects report          # Screen captures of the synthesized schematics
 └── README.md
