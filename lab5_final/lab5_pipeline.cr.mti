@@ -1,0 +1,43 @@
+C:/EE533/week5/lab5_final/pipeline_datapath.v {1 {vlog -work work -vopt -stats=none C:/EE533/week5/lab5_final/pipeline_datapath.v
+Model Technology ModelSim SE-64 vlog 10.6e Compiler 2018.06 Jun 23 2018
+-- Compiling module pipeline_datapath
+
+Top level modules:
+	pipeline_datapath
+
+} {} {}} C:/EE533/week5/lab5_final/tb.v {1 {vlog -work work -vopt -stats=none C:/EE533/week5/lab5_final/tb.v
+Model Technology ModelSim SE-64 vlog 10.6e Compiler 2018.06 Jun 23 2018
+-- Compiling module tb
+
+Top level modules:
+	tb
+
+} {} {}} C:/EE533/week5/lab5_final/regfile.v {1 {vlog -work work -vopt -stats=none C:/EE533/week5/lab5_final/regfile.v
+Model Technology ModelSim SE-64 vlog 10.6e Compiler 2018.06 Jun 23 2018
+-- Compiling module regfile
+
+Top level modules:
+	regfile
+
+} {} {}} C:/EE533/week5/lab5_final/D_MEM.v {1 {vlog -work work -vopt -stats=none C:/EE533/week5/lab5_final/D_MEM.v
+Model Technology ModelSim SE-64 vlog 10.6e Compiler 2018.06 Jun 23 2018
+-- Compiling module D_MEM
+
+Top level modules:
+	D_MEM
+
+} {} {}} C:/EE533/week5/lab5_final/I_MEM.v {1 {vlog -work work -vopt -stats=none C:/EE533/week5/lab5_final/I_MEM.v
+Model Technology ModelSim SE-64 vlog 10.6e Compiler 2018.06 Jun 23 2018
+-- Compiling module I_MEM
+
+Top level modules:
+	I_MEM
+
+} {} {}} C:/EE533/week5/lab5_final/alu_new.v {1 {vlog -work work -vopt -stats=none C:/EE533/week5/lab5_final/alu_new.v
+Model Technology ModelSim SE-64 vlog 10.6e Compiler 2018.06 Jun 23 2018
+-- Compiling module alu_new
+
+Top level modules:
+	alu_new
+
+} {} {}}
