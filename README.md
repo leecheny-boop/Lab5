@@ -30,4 +30,6 @@ E533-Lab5-Processor/
 │   ├── tb.v           # Testbench: Verifies instruction flow and data hazards
 ├── docs/
 │   ├── projects report          # Screen captures of the synthesized schematics
+│   ├── inst.coe          # Instructions thta fectched by IF
+│   ├── data.coe          # Original Data that stored in D_MEM
 └── README.md
